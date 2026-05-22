@@ -29,12 +29,47 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     width:70%;
+    height: 100dvh;
     transform: translateX(25%);
-    margin-top: 10%;
 }
 
 /* Styles the header in the introduction section */
 #Introduction h1 {
     padding: 25px;
     text-align: center;
+    font-size: 3rem;
+}
+
+/* Styles the paragraphs in the introduction section */
+#Introduction p {
+    text-align: center;
+    padding:25px;
+    font-size: 1.5rem;
+}
+
+/* Styles the grid section */
+#Grid {
+    margin: 1em;
+    padding: 1em;
+    display:flex;
+    flex-direction: row;
+}
+
+/* Styles the image within the grids */
+#Grid div.gridItem img{
+    width: 70%;
+}
+
+/* Styles each item in the grid */
+.gridItem {
+    display:flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+    margin:5px;
+}
+
+/* Styles the textbox of the grid items */
+.gridItem p {
+    width:70%;
 }
