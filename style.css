@@ -4,6 +4,15 @@
     margin: 0;
 }
 
+/* Styles the entire navbar */
+nav {
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background-color:#f5f5f5
+}
+
 /* Styles nav container */
 nav ul {
     display: flex;
@@ -14,7 +23,7 @@ nav ul {
 /* Styles the navigation items */
 nav ul li {
     list-style-type: none;
-    padding: 1em;
+    padding: 1.25em;
 }
 
 /* Styles each navigation link */
@@ -72,4 +81,9 @@ nav ul li a {
 /* Styles the textbox of the grid items */
 .gridItem p {
     width:70%;
+}
+
+/* Styles the table that contains the data */
+.dataTable {
+    
 }
