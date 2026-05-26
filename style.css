@@ -51,7 +51,7 @@ nav ul li a {
 
 /* Styles the paragraphs in the introduction section */
 #Introduction p {
-    text-align: center;
+    text-align: left;
     padding:25px;
     font-size: 1.5rem;
 }
@@ -73,8 +73,8 @@ nav ul li a {
 .gridItem {
     display:flex;
     flex-direction: column;
-    height: fit-content;
     align-items: center;
+    width:70%;
     margin:5px;
 }
 
@@ -83,7 +83,13 @@ nav ul li a {
     width:70%;
 }
 
-/* Styles the table that contains the data */
 .dataTable {
-    
+    margin-left: 35%;
+    margin-top: 3%;
+    scale: 1.1;
+}
+
+/* Styles boxes in the table */
+.dataTable td, th {
+    padding:5px;
 }
