@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+img {
+    animation:image-fade-in 5s;
+}
+
 /* Styles the entire navbar */
 nav {
     position:fixed;
@@ -34,6 +38,7 @@ nav ul li a {
 
 /* Styles the introduction section */
 #Introduction {
+    position:relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,6 +52,8 @@ nav ul li a {
     padding: 25px;
     text-align: center;
     font-size: 3rem;
+    color:white;
+    animation: fade-in 3s;
 }
 
 /* Styles the paragraphs in the introduction section */
@@ -54,6 +61,8 @@ nav ul li a {
     text-align: left;
     padding:25px;
     font-size: 1.5rem;
+    color:white;
+    animation:fade-in 3s;
 }
 
 /* Styles the grid section */
@@ -65,8 +74,9 @@ nav ul li a {
 }
 
 /* Styles the image within the grids */
-#Grid div.gridItem img{
-    width: 70%;
+.gridItem img {
+    max-width:70%;
+    height:fit-content;
 }
 
 /* Styles each item in the grid */
@@ -76,6 +86,9 @@ nav ul li a {
     align-items: center;
     width:70%;
     margin:5px;
+    height: 50%;
+    animation:fade-in 3s;
+    animation-timeline: scroll();
 }
 
 /* Styles the textbox of the grid items */
@@ -84,12 +97,54 @@ nav ul li a {
 }
 
 .dataTable {
-    margin-left: 35%;
-    margin-top: 3%;
     scale: 1.1;
+    column-count: 2;
+}
+
+.dataTable img {
+    height:100px;
+    width:auto;
+    object-fit: cover;
+    padding:none;
+    margin:none;
+}
+
+.dataTable td img {
+    padding:none;
+    margin:none;
 }
 
 /* Styles boxes in the table */
 .dataTable td, th {
-    padding:5px;
+    padding:1%;
+}
+
+/* Styles the banner image */
+#banner img {
+    width:100%;
+    position:absolute;
+    height:100dvh;
+    filter: brightness(0.7);
+}
+
+
+/* Animations */
+@keyframes image-fade-in {
+    from {
+        filter: brightness(0.0);
+    }
+
+    to {
+        filter: brightness(0.6);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: none;
+    }
 }
