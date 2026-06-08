@@ -76,7 +76,7 @@ nav ul li a {
 /* Styles the image within the grids */
 .gridItem img {
     max-width:70%;
-    height:fit-content;
+    height:200px;
 }
 
 /* Styles each item in the grid */
@@ -87,7 +87,7 @@ nav ul li a {
     width:70%;
     margin:5px;
     height: 50%;
-    animation:fade-in 3s;
+    animation:fade-in 5s;
     animation-timeline: scroll();
 }
 
@@ -99,6 +99,14 @@ nav ul li a {
 .dataTable {
     scale: 1.1;
     column-count: 2;
+    background-color: white;
+    transform:translateX(45%);
+    margin-top:50px;
+    width:50%;
+}
+
+.dataTable caption {
+    color:white;
 }
 
 .dataTable img {
@@ -141,10 +149,19 @@ nav ul li a {
 
 @keyframes fade-in {
     from {
-        transform: translateX(-100%);
+        opacity: 0.0;
     }
 
     to {
-        transform: none;
+        opacity: 1.0;
+    }
+}
+
+@keyframes transform-up {
+    from {
+        transform: translateY(100dvh);
+    }
+    to {
+        transform:translateY(-100dvh);
     }
 }
