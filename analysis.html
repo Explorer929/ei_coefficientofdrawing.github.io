@@ -11,20 +11,26 @@
             text-align: center;
             margin:0;
             padding:0;
+            font-size: 3em;
+            position: relative;
+            color:white;
         }
         
-        #Grid div.gridItem img{
-            width: 100%;
+        .row img {
+            width:15rem;
+            margin:10px;
         }
 
-        #Grid div.gridItem p{
-            transform: translateY(75%);
-            margin:0;
-            padding:0;
+        .row {
+            display: flex;
+            flex-direction: row;
         }
 
-        #Grid div.gridItem h2{
-            margin-top:15%;
+        .row figcaption {
+            position:relative;
+            padding:10px;
+            color:white;
+            width:15rem;
         }
 
     </style>
@@ -35,10 +41,14 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="analysis.html">Analysis</a></li>
-                <li><a href="#">Conclusion</a></li>
+                <li><a href="conclusion.html">Conclusion</a></li>
             </ul>
         </nav>
     </header>
+
+    <section id="banner">
+        <img src="images/LabSetupWithoutWeights.jpg" alt="Image of the lab setup without the weights" style="filter: brightness(0.6); position:fixed;">
+    </section>
 
     <section id="Introduction">
         <h1>Analysis</h1>
@@ -53,90 +63,98 @@
              distance of 18.415cm. The front pencil (closest to the pulley) 
              starts at 4.445cm, but still travels the same distance.
         </p>
+        <p>
+            <em>Coefficient is determined based on the average from all the pencils, not the
+            pencils individually.</em>
+        </p>
     </section>
 
-    <section id="Grid">
-        <div class="gridItem">
-            <table class="dataTable" border="1px solid black">
-        <caption>Time (s) it took to travel 7.25 inches</caption>
+    <main style="display: flex; flex-direction: column;">
+        <h2 style="color: white; position: relative;">Observations</h2>
+
+    <div class="row" style="position:relative; justify-content: center;animation:fade-in 5s">
+        <figure>
+            <figcaption style="text-align: center;">Canson Bristol</figcaption>
+            <img src="images/CansonBristol.jpg" alt="Microscopic image of the Canson Bristol paper">
+            <figcaption>Incredibly smooth with noticeably longer fibers.</figcaption>
+        </figure>
+
+        <figure>
+            <figcaption style="text-align: center;">Canson Mixed Media</figcaption>
+            <img src="images/CansonMixedMedia.jpg" alt="Microscopic image of the Canson Mixed Media paper">
+            <figcaption>Quite smooth, with thinner patches lacking fibers.</figcaption>
+        </figure>
+
+        <figure>
+            <figcaption style="text-align: center;">Canson Watercolor</figcaption>
+            <img src="images/CansonWatercolor.jpg" alt="Microscopic image of the Canson Watercolor paper">
+            <figcaption>Very short fibers, alongside thin patches that are extremely small and frequent.</figcaption>
+        </figure>
+
+        <figure>
+            <figcaption style="text-align: center;">Arches Watercolor</figcaption>
+            <img src="images/ArchesWatercolor.jpg" alt="Microscopic image of the Arches Watercolor paper">
+            <figcaption>Long fibers in multiple layers, more dense than the other papers.</figcaption>
+        </figure>
+
+        <figure>
+            <figcaption style="text-align: center; justify-content: center;">Canvas</figcaption>
+            <img src="images/ArchesWatercolor.jpg" alt="Microscopic image of the Canvas paper">
+            <figcaption>"Vary hairy," Interwoven threads with clear gaps, looks very bumpy/not smooth.</figcaption>
+        </figure>
+    </div>
+
+    <h2>Data</h2>
+
+    
+    <table class="dataTable" border="1px solid black">
+        <caption>Time (s) it took to travel 7.25 inches (*Had different mass at end of string)</caption>
         <tr>
-            <th>Material & Initial Friction Rating</th>
+            <th>Material (&mu;<sub>k</sub>)</th>
             <td>Trial #1</td>
             <td>Trial #2</td>
             <td>Trial #3</td>
+            <td>Average</td>
         </tr>
         <tr>
-            <th>Canson Bristol (5)</th>
+            <th>Canson Bristol (0.066)</th>
             <td>0.85s</td>
             <td>0.77s</td>
             <td>0.73s</td>
+            <td>0.78s</td>
         </tr>
         <tr>
-            <th>Canson Mixed Media (4)</th>
+            <th>Canson Mixed Media (0.068)</th>
             <td>0.83s</td>
             <td>0.76s</td>
             <td>0.79s</td>
+            <td>0.79s</td>
         </tr>
         <tr>
-            <th>Canson Watercolor (3)</th>
+            <th>Canson Watercolor (0.057)</th>
             <td>0.67s</td>
             <td>0.75s</td>
             <td>0.66s</td>
+            <td>0.69s</td>
         </tr>
         <tr>
-            <th>Arches Watercolor (2)</th>
+            <th>Arches Watercolor (0.081)</th>
             <td>1.17s</td>
             <td>1.06s</td>
             <td>0.87s</td>
+            <td>1.03s</td>
         </tr>
         <tr>
-            <th>Canvas* (1)</th>
+            <th>Canvas* (0.120)</th>
             <td>0.91s</td>
             <td>0.73s</td>
             <td>0.82s</td>
+            <td>0.84s</td>
         </tr>
-            </table>
-            <p style="text-align: center; margin-top: 3%;"><em>*Had different mass at end of string</em></p>
-        </div>
+    </table>
 
-        <table class="dataTable" border="1px solid black">
-        <caption>Time (s) it took to travel 7.25 inches</caption>
-        <tr>
-            <th>Material</th>
-            <td>Microscopic Profile</td>
-            <td>Observations</td>
-        </tr>
-        <tr>
-            <th>Canson Bristol (5)</th>
-            <td><img src="images/CansonBristol.jpg" alt="Microscopic image of the paper called Canson Bristol" style="width:70%"></td>
-            <td>Incredibly smooth with noticeably longer fibers</td>
-        </tr>
-        <tr>
-            <th>Canson Mixed Media (4)</th>
-            <td>0.83s</td>
-            <td>0.76s</td>
-            <td>0.79s</td>
-        </tr>
-        <tr>
-            <th>Canson Watercolor (3)</th>
-            <td>0.67s</td>
-            <td>0.75s</td>
-            <td>0.66s</td>
-        </tr>
-        <tr>
-            <th>Arches Watercolor (2)</th>
-            <td>1.17s</td>
-            <td>1.06s</td>
-            <td>0.87s</td>
-        </tr>
-        <tr>
-            <th>Canvas* (1)</th>
-            <td>0.91s</td>
-            <td>0.73s</td>
-            <td>0.82s</td>
-        </tr>
-            </table>
-        
+    <div style="padding:20px; position: relative; height: auto; display: flex; align-items: center; flex-direction: column;">
+        <h2>Derivation</h2>
+        <img src="images/Derivation.png" alt="Derivation for the coefficient of friction eqution." style="position:relative; max-height: 800px;background-color: rgba(255, 255, 255, 0.414);"/>
     </div>
-</body>
 </html>
